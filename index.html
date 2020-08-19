@@ -42,7 +42,7 @@
 
             let city = document.getElementById('cityName').value;
         
-            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=17752d91a04c2df049aa05114de7fd31`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=17752d91a04c2df049aa05114de7fd31`)
             .then(res => res.json())
             .then(data => {
             const iconCode = data.weather[0].icon;
@@ -57,7 +57,7 @@
             // console.log(data);
         
             document.getElementById('weather-img').src =  
-        `http://openweathermap.org/img/w/${iconCode}.png`;
+        `https://openweathermap.org/img/w/${iconCode}.png`;
         document.getElementById('location').innerHTML = cityName;
         document.getElementById('temperature').innerHTML = temperatureShow;
         document.getElementById('lead').innerHTML = weather;
